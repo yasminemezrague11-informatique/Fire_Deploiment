@@ -1,14 +1,8 @@
-
-
 from pathlib import Path
 import os 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-tq4h(e$n-1t7=_w7ol&*nd91h!e-2=tqa^9h+*a7cb0$fr8y$w'
@@ -16,7 +10,8 @@ SECRET_KEY = 'django-insecure-tq4h(e$n-1t7=_w7ol&*nd91h!e-2=tqa^9h+*a7cb0$fr8y$w
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# IMPORTANT for Render deployment
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -64,8 +59,6 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 
 
 # Database
-# https://docs.djangoproject.com/en/5.1/ref/settings/#databases
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -75,8 +68,6 @@ DATABASES = {
 
 
 # Password validation
-# https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
-
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -94,34 +85,29 @@ AUTH_PASSWORD_VALIDATORS = [
 
 
 # Internationalization
-# https://docs.djangoproject.com/en/5.1/topics/i18n/
-
 LANGUAGE_CODE = 'en-us'
-
 TIME_ZONE = 'UTC'
-
 USE_I18N = True
-
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/5.1/howto/static-files/
+# Static files settings for Render
+STATIC_URL = '/static/'
 
-STATIC_URL = 'static/'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR , 'static'),
-]
+# Render needs a STATIC_ROOT for collectstatic
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-# Default primary key field type
-# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
+# You can remove STATICFILES_DIRS unless you have a /static folder at project root
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, 'static'),
+# ]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
 JAZZMIN_SETTINGS = {
-     "site_title": "Admin Chef de pompiers",
-    "site_header": "Mon Admin", 
+    "site_title": "Admin Chef de pompiers",
+    "site_header": "Mon Admin",
     "show_ui_builder": False,
-   
 }
 
 JAZZMIN_UI_TWEAKS = {
