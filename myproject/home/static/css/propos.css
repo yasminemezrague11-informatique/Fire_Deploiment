@@ -1,0 +1,200 @@
+
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+   background-image: url(feuforet.jpg);
+   background-size: cover; /* Ajuste pour couvrir tout l'écran */
+   background-repeat: no-repeat; /* Empêche la répétition de l'image */
+   background-position: center; /* Centrage de l'image */
+    color: #fff;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Section */
+/* Header Section */
+.header {
+    background: linear-gradient(120deg, #131415, #f04603);
+    text-align: center;
+    height: 150px; /* Hauteur fixe pour le header */
+    display: flex; /* Permet de centrer le contenu */
+    align-items: center; /* Centre verticalement */
+    justify-content: center; /* Centre horizontalement */
+    color: #fff;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.header h1 {
+    font-size: 2em; /* Ajuste la taille pour s'adapter à la hauteur réduite */
+    margin: 0;
+    font-weight: bold;
+    letter-spacing: 2px;
+    animation: fadeInDown 1s ease-in-out;
+}
+/* Styles pour h1 dans le header */
+.header h1 {
+    font-size: 3rem; /* Taille du texte */
+    font-weight: bold; /* Texte en gras */
+    text-transform: uppercase; /* Tout en majuscules */
+    text-align: center; /* Centré */
+    color: #fff; /* Couleur principale */
+    position: relative; /* Nécessaire pour les animations enfants */
+    margin: 20px auto; /* Espacement autour */
+    letter-spacing: 3px; /* Espacement entre les lettres */
+    animation: fade-in 1.5s ease-in-out; /* Apparition fluide */
+}
+
+/* Animation d'apparition */
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Ligne animée sous le titre */
+.header h1::after {
+    content: '';
+    display: block;
+    width: 0; /* Ligne initialement cachée */
+    height: 4px; /* Épaisseur de la ligne */
+    background: linear-gradient(to right, #fff, #131415); /* Dégradé dynamique */
+    margin: 10px auto; /* Centré sous le texte */
+    border-radius: 2px; /* Arrondi des bords */
+    animation: slide-in 1s ease-out 0.5s forwards; /* Animation différée */
+}
+
+/* Animation pour la ligne */
+@keyframes slide-in {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+    to {
+        width: 50%; /* Longueur finale de la ligne */
+        opacity: 1;
+    }
+}
+
+
+/* About Section */
+.about-section {
+    margin: 50px 50px;
+    padding: 40px 20px;
+    background: linear-gradient(145deg, #25272bc3, #1f2023c7);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+    border-radius: 12px;
+    animation: fadeInUp 1.2s ease-in-out;
+}
+
+.about-section h2 {
+    font-size: 2em;
+    color: #f04603;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.about-section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #f04603;
+    margin-top: 5px;
+    border-radius: 2px;
+}
+
+.about-section p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #e0e0e0;
+}
+
+.about-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.about-section ul li {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: #b3b3b3;
+    position: relative;
+    padding-left: 30px;
+}
+
+.about-section ul li::before {
+    content: '★';
+    color: #f04603;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.2em;
+}
+
+/* Footer */
+.footer {
+    background: linear-gradient(120deg, #131415, #f04603);
+    text-align: center;
+    padding: 20px 0;
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+    margin-top: 50px;
+    color: #fff;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2.5em;
+    }
+
+    .about-section h2 {
+        font-size: 1.5em;
+    }
+
+    .about-section p {
+        font-size: 1em;
+    }
+}
