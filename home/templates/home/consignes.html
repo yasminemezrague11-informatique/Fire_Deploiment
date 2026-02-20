@@ -1,0 +1,135 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consignes de Sécurité - Incendie et Feux de Forêt</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+    <script src="{% static 'js/scriptConsigne.js' %}" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Consignes de Sécurité Incendie et Feux de Forêt</h1>
+            <p>Préparez-vous et agissez de manière responsable en cas d'urgence.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="intro">
+            <h2>Introduction</h2>
+            <p>Les incendies et feux de forêt représentent des menaces sérieuses pour la vie, les biens et l'environnement. Il est essentiel de comprendre les risques et de prendre les mesures appropriées pour se protéger ainsi que les autres.</p>
+        </section>
+
+        <section class="consignes incendie">
+            <h2>Consignes de Sécurité en Cas d'Incendie</h2>
+            <div class="content">
+                <div class="list">
+                    <h3>Avant un incendie :</h3>
+                    <ul>
+                        <li>Installez des détecteurs de fumée et vérifiez leur bon fonctionnement régulièrement.</li>
+                        <li>Élaborez un plan d'évacuation avec votre famille et familiarisez-vous avec les sorties de secours.</li>
+                        <li>Ranger les produits inflammables à une distance sûre des sources de chaleur.</li>
+                    </ul>
+                </div>
+
+                <div class="list">
+                    <h3>En cas d'incendie :</h3>
+                    <ul>
+                        <li>Restez calme et alertez immédiatement les secours (composez le 112).</li>
+                        <li>Si le feu est maîtrisable, utilisez un extincteur approprié, sinon évacuez les lieux immédiatement.</li>
+                        <li>Fermez les portes derrière vous en quittant une pièce pour ralentir la propagation du feu.</li>
+                    </ul>
+                </div>
+
+                <div class="list">
+                    <h3>Après un incendie :</h3>
+                    <ul>
+                        <li>Ne retournez pas dans une zone sinistrée avant l'autorisation des autorités.</li>
+                        <li>Vérifiez la sécurité des installations électriques et de gaz avant de les utiliser.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="feu-de-foret">
+            <h2>Consignes de Sécurité en Cas de Feu de Forêt</h2>
+            <div class="content">
+                <div class="list">
+                    <h3>Avant un feu de forêt :</h3>
+                    <ul>
+                        <li>Vérifiez les prévisions météorologiques et soyez attentif aux alertes de feux de forêt.</li>
+                        <li>Créez une zone tampon autour de votre propriété en éliminant les végétaux secs et les matériaux inflammables.</li>
+                        <li>Préparez un kit d'urgence avec de l'eau, des vêtements de protection et des documents importants.</li>
+                    </ul>
+                </div>
+
+                <div class="list">
+                    <h3>En cas de feu de forêt :</h3>
+                    <ul>
+                        <li>Suivez les instructions des autorités locales et évacuez si l'ordre est donné.</li>
+                        <li>Si vous êtes pris au piège, restez à l'intérieur et coupez les sources d'énergie pour éviter les explosions.</li>
+                        <li>Évitez les routes proches des incendies et privilégiez les itinéraires moins exposés.</li>
+                    </ul>
+                </div>
+
+                <div class="list">
+                    <h3>Après un feu de forêt :</h3>
+                    <ul>
+                        <li>Ne retournez pas chez vous tant que les autorités n'ont pas levé l'ordre d'évacuation.</li>
+                        <li>Si vous revenez, faites attention aux zones encore en feu et aux débris qui peuvent être dangereux.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+       
+
+        <section class="more-info">
+            <div class="more-info-container">
+                <button id="moreInfoBtn">Afficher plus d'informations</button>
+            </div>
+            <div id="moreInfo" class="hidden">
+                <h3>Mesures supplémentaires</h3>
+                <p>Le rôle de chaque citoyen est crucial dans la prévention des incendies. Il est essentiel de respecter les réglementations locales concernant l'utilisation de feux en extérieur, les barbecue et autres appareils susceptibles de provoquer un incendie. De plus, le nettoyage des voies d'évacuation et des points d'eau en cas de besoin est une précaution importante.</p>
+            </div>
+        </section>
+    </main><br><br><br><br><br><br>
+
+    <!-- Pied de page -->
+    <footer>
+        <div class="footer-container">
+          <!-- Informations de contact -->
+          <div class="footer-section contact">
+            <h3>Contact</h3>
+            <p>📍 Adresse : Rue des Forêts, Tizi Ouzou, Algérie</p>
+            <p>📞 Urgence : <a href="tel:+213123456789">+213 123 456 789</a></p>
+            <p>📧 Email : <a href="mailto:info@feuxforets.dz">info@feuxforets.dz</a></p>
+          </div>
+      
+          <!-- Liens importants -->
+          <div class="footer-section links">
+            <h3>Liens utiles</h3>
+            <ul>
+              <li><a href="/">Accueil</a></li>
+              <li><a href="/about">À propos</a></li>
+              <li><a href="/prevention">Prévention des incendies</a></li>
+              <li><a href="/contact">Contact</a></li>
+            </ul>
+          </div>
+      
+          <!-- Réseaux sociaux -->
+          <div class="footer-section social">
+            <h3>Suivez-nous</h3>
+            <p>
+              <a href="https://facebook.com" target="_blank">Facebook</a> |
+              <a href="https://twitter.com" target="_blank">Twitter</a> |
+              <a href="https://instagram.com" target="_blank">Instagram</a>
+            </p>
+          </div>
+        </div>
+      </footer>
+      
+</body>
+</html>
